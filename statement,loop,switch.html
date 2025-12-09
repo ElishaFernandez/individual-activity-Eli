@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Activity</title>
+    <link rel="stylesheet" href="statement,loop,switch.css">
+</head>
+<body>
+<div class="container">
+<h2>Loop & Switch & If-Else</h2>
+<p style="text-align: center;">Click the buttons to see how Loop, Switch, and If-Else works!</p>
+
+
+
+<div class="section">
+<h3>LOOP Example — Cleaning Tasks</h3>
+<button onclick="runCleaningTasks()">Run Cleaning Loop</button>
+<div id="outputCleaning"></div>
+</div>
+
+
+
+<div class="section">
+<h3>SWITCH Example — Hunger Level</h3>
+<label>Select Hunger Status (BUSOG, GUTOM, GUTOM NA GUTOM): </label>
+<select id="hungerSelect">
+<option value="full">BUSOG</option>
+<option value="hungry">GUTOM</option>
+<option value="starving">GUTOM NA GUTOM NA</option>
+</select>
+<button onclick="checkHunger()">Evaluate Hunger</button>
+<div id="outputHunger"></div>
+</div>
+
+
+
+<div class="section">
+<h3>IF-ELSE Example — Age Checker</h3>
+<label>Enter your age:</label>
+<input type="number" id="ageInput" placeholder="ex. 16" />
+<button onclick="checkAge()">Check Age</button>
+<div id="outputIfElse"></div>
+</div>
+
+
+</div>
+    <script src="statement,loop,switch.js"></script>
+</body>
+</html>
