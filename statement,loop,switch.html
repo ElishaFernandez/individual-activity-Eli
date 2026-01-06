@@ -49,3 +49,77 @@
     <script src="statement,loop,switch.js"></script>
 </body>
 </html>
+ const student1 = {
+            Name: "John",
+            lastName: "Doe",
+            age: 16,
+            lrn: "1234567890"
+          
+        };
+        
+        const student2 = {
+            firstName: "Jane",
+            lastName: "Smith",
+            age: 17,
+            lrn: "0987654321"
+        };
+        
+        let ictStudent = student1;
+        let humss = student2;
+            console.log(ictStudent);
+            console.log(humss);
+        let ictName = ictStudent.Name;
+            console.log(ictName);
+            console.log(humss.lrn);
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+   
+    <script>
+       
+       function hero(health, mana, strength){
+              this.mana = 20;
+              this.health = 100;
+              this.strength = 50;
+       }
+        
+       function weapon( damage, durability){
+              this.damage = 25;
+              this.durability = 100;
+       }
+       const lapulapu = new hero();
+       const paquito = new hero();
+       console.log("lapulapu's health",lapulapu.health);
+       console.log("paquitos's health",paquito.health);
+
+            
+            lapulapu.health = 50;
+            paquito.health = 10;
+            console.log("lapulapu's health",lapulapu.health);
+            console.log("paquitos's health",paquito.health);
+
+        lapulapu.armor = 15;
+        console.log("lapulapu's Armor",lapulapu.armor);
+        paquito.hunger = 10;
+        console.log("paquito's hunger",paquito.hunger);
+        delete paquito.hunger;
+        console.log("paquito's hunger after deleting",paquito.hunger);
+
+        const sword = new weapon();
+        const bow = new weapon();
+     
+         
+        lapulapu.weapon = sword;
+        paquito.weapon = bow;
+        lapulapu.weapon.damage = 40;
+        paquito.weapon.damage = 15;
+           console.log("lapulapus weapon",sword.damage);
+              console.log("paquito's weapon",bow.damage);
+    </script>
+</body>
+</html>

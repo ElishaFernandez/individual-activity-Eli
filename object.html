@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+   
+    <script>
+       
+       function student(name, age, grade){
+              this.name = name;
+              this.age = age;
+              this.grade = grade;
+       }
+        
+       function Gadget( type, brand){
+              this.type = type;
+              this.brand = brand;
+              this.battery = 100;
+       }
+
+       const Eli = new student("Eli", 16, "95");
+       const San = new student("San", 17, "90");
+       console.log("Eli's name",Eli.name);
+       console.log("San's age",San.age);
+
+            
+            Eli.grade = 96;
+            San.grade = 10;
+            console.log("Eli's grade",Eli.grade);
+            console.log("San's grade",San.grade);
+
+            Eli.food = "Sushi";
+        console.log("Eli's food",Eli.food);
+        San.food = "Burger";
+        console.log("San's food",San.food);
+        delete San.food;
+        console.log("San's food after deleting",San.food);
+
+        const laptop = new Gadget(  "Laptop", "Dell");
+        const phone = new Gadget( "Phone", "Samsung");
+     
+         
+        Eli.gadget = laptop;
+        San.gadget = phone;
+
+        Eli.gadget.battery = 80;
+        San.gadget.battery = 50;
+         
+              console.log("Eli's gadget battery",laptop.battery);
+                  console.log("San's gadget battery",phone.battery);
+    </script>
+</body>
+</html>
