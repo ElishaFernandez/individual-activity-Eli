@@ -37,5 +37,5 @@ document.getElementById("clearBtn").addEventListener("click", function () {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
     document.getElementById("operator").value = "";
-    document.getElementById("result").textContent = "---";
+    document.getElementById("result").textContent = "";
 });
