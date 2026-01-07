@@ -3,6 +3,7 @@ body {
     text-align: center;
     margin: 50px;
     line-height: 1.6;
+    background-image: url(https://www.bing.com/th/id/OIP.smpS00cLyegM7hbXQqVRpQHaEK?w=292&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
 }
 .game-container {
     display: flex;
@@ -29,6 +30,7 @@ button, input, select {
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
+    color: blue;
 }
 .health-bar {
     width: 100%;
