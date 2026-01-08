@@ -1,9 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
+       background-image: url("https://wallpapercat.com/w/full/8/8/2/141839-3840x2160-desktop-4k-naruto-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     text-align: center;
-    margin: 50px;
-    line-height: 1.6;
-    background-image: url(https://www.bing.com/th/id/OIP.smpS00cLyegM7hbXQqVRpQHaEK?w=292&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
 }
 .game-container {
     display: flex;
@@ -43,3 +44,30 @@ button, input, select {
     background: green;
     width: 100%;
 }
+.weapons {
+    margin-top: 10px;
+}
+
+.weapon {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+/* hover effect */
+.weapon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px gold;
+}
+
+/* selected weapon */
+.weapon.selected {
+    border: 3px solid gold;
+    box-shadow: 0 0 15px gold;
+}
+
