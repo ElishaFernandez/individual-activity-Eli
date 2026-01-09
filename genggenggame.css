@@ -62,7 +62,7 @@ button, input, select {
 /* hover effect */
 .weapon:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px gold;
+    box-shadow: 0 0 10px rgb(253, 163, 231);
 }
 
 /* selected weapon */

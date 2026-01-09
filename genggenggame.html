@@ -6,6 +6,7 @@
     initial-scale=1.0">
     <title>Text Base Game</title>
     <link rel="stylesheet" href="genggenggame.css">
+    <script src="game.js"></script>
 </head>
 <body >
     <h1 style="background-color: orange;">Two-Player Text-Based Battle Game</h1>
@@ -14,9 +15,9 @@
         "Enter Player 1 name" oninput="validateNames()">
         <input type="text" id="player2-name" placeholder=
         "Enter Player 2 name" oninput="validateNames()"><br>
-        <button id="start-game" onclick="startGame()" 
-        >Start Game</button>
+        <button id="start-game" onclick="startGame()">Start Game</button>
     </div> <br>
+    
     <div id="game-container">
         <div class="player-container" id="player1">
             <h2 id="player1-title">Player 1</h2>
@@ -28,12 +29,12 @@
 
 
 <div class="weapons">
-    <img src="sword.jpg" class="weapon" onclick="selectWeapon(1, 'Sword', this)">
-    <img src="bow.jpg" class="weapon" onclick="selectWeapon(1, 'Bow', this)">
-    <img src="axe.jpg" class="weapon" onclick="selectWeapon(1, 'Axe', this)">
+    <img src="sword.jpg" class="weapon" onclick="setWeapon(1, 'Sword', this)">
+    <img src="bow.jpg" class="weapon" onclick="setWeapon(1, 'Bow', this)">
+    <img src="axe.jpg" class="weapon" onclick="setWeapon(1, 'Axe', this)">
 </div>
 
-<p>Selected Weapon: <span id="player1-selected">None</span></p>
+
 
 
 
@@ -48,18 +49,18 @@
             <h3>Wins: <span id="player2-wins">0</span></h3>
    
 <div class="weapons">
-    <img src="sword.jpg" class="weapon" onclick="selectWeapon(2, 'Sword', this)">
-    <img src="bow.jpg" class="weapon" onclick="selectWeapon(2, 'Bow', this)">
-    <img src="axe.jpg" class="weapon" onclick="selectWeapon(2, 'Axe', this)">
+    <img src="sword.jpg" class="weapon" onclick="setWeapon(2, 'Sword', this)">
+    <img src="bow.jpg" class="weapon" onclick="setWeapon(2, 'Bow', this)">
+    <img src="axe.jpg" class="weapon" onclick="setWeapon(2, 'Axe', this)">
 </div>
 
-<p>Selected Weapon: <span id="player2-selected">None</span></p>
+
 
     <button id="player2-attack" onclick="playerAttack(2)" 
             >Attack</button>
         </div>
     </div>
     <div id="game-log"><h3>Game Log</h3></div>
-    <script src="game.js"></script>
+
 </body>
 </html>
