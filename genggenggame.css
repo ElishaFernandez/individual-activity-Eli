@@ -1,6 +1,6 @@
 body {
-       background-image: url("https://wallpapercat.com/w/full/8/8/2/141839-3840x2160-desktop-4k-naruto-background.jpg");
-    background-size: cover;
+      background-image: url("https://wallpapercat.com/w/full/8/8/2/141839-3840x2160-desktop-4k-naruto-background.jpg");
+   background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,9 +30,7 @@ body {
 button, input, select {
     margin-top: 10px;
     padding: 10px;
-    font-size: 16px;
-    color: blue;
-}
+    font-size: 16px;}
 .health-bar {
     width: 100%;
     height: 20px;
@@ -44,30 +42,10 @@ button, input, select {
     background: green;
     width: 100%;
 }
-.weapons {
-    margin-top: 10px;
-}
 
-.weapon {
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    margin: 5px;
-    border-radius: 10px;
-    background-color: white;
-    transition: transform 0.2s, border 0.2s, box-shadow 0.2s;
-}
+.weapon-img { cursor: pointer; width: 80px; height: 80px; margin: 4px; border: 2px solid transparent; border-radius: 6px; }
+.weapon-selected { border-color: #0078d4; box-shadow: 0 0 6px rgba(0,120,212,0.3); }
 
-/* hover effect */
-.weapon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgb(253, 163, 231);
-}
-
-/* selected weapon */
-.weapon.selected {
-    border: 3px solid gold;
-    box-shadow: 0 0 15px gold;
-}
-
+.attack-icon { width: 80px; height: 80px; display: inline-block; vertical-align: middle; }
+button#player1-attack, button#player2-attack { background: transparent; border: none; padding: 6px; }
+button#player1-attack[disabled], button#player2-attack[disabled] { opacity: 0.6; }
