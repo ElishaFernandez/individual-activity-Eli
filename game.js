@@ -6,36 +6,36 @@ class Hero {
     
 }
 
-setWeapon(weapon); {
+setWeapon(weapon) {
     this.weapon = weapons[weapon];
     this.weaponName = weapon;
-    messageLog(`${this.name} has equipped a ${this.weaponName}.`);
+    messageLog(`${this.name} has equipped a ${weapon}`);
 
-
+}
 const weapons = {
-    Sword:(Damage=20, Accuracy=0.8),
-    Bow:(Damage=15, Accuracy=0.9),
-    Axe:(Damage=25, Accuracy=0.7)
+    Sword:{ Damage:20, Accuracy:0.8 },
+    Bow:{ Damage:15, Accuracy:0.9 },
+    Axe:{ Damage:25, Accuracy:0.7 }
 };
 
 attack(opponent) {
         log(`${this.name} attacks ${opponent.name} 
                  with a ${this.weaponName} for ${damage} damage!`);
             opponent.takeDamage(damage);
-        // if (Math.random() < this.weapon.hitChance) {
-        //     const damage = Math.floor(Math.random() * 
-        //     (this.weapon.maxDamage - this.weapon.minDamage + 1)) 
-        //     + this.weapon.minDamage;
-        //     log(`${this.name} attacks ${opponent.name} 
-        //         with a ${this.weaponName} for ${damage} damage!`);
-        //     opponent.takeDamage(damage);
-        // } else {
-        //     log(`${this.name} missed the attack with their 
-        //         ${this.weaponName}!`);
-        // }
-    }
+    //   if (Math.random() < this.weapon.hitChance) {
+    //          const damage = Math.floor(Math.random() * 
+    //          (this.weapon.maxDamage - this.weapon.minDamage + 1)) 
+    //          + this.weapon.minDamage;
+    //          log(`${this.name} attacks ${opponent.name} 
+    //              with a ${this.weaponName} for ${damage} damage!`);
+    //          opponent.takeDamage(damage);
+    //      } else {
+    //          log(`${this.name} missed the attack with their 
+    //              ${this.weaponName}!`);
+    //      }
+    // }
     
-     let attacker = playerNum === 1 ? player1 : player2;
+    let attacker = playerNum === 1 ? player1 : player2;
     let defender = playerNum === 1 ? player2 : player1;
     let selectedWeapon = document.getElementById
     (`player${playerNum}-weapon`).value;
@@ -50,6 +50,7 @@ let player1, player2;
 let currentplayer;
  
 function startGame() {
+    alert("The battle begins!");
     player1 = new Hero(document.getElementById("player1-name").value.trim());
     player2 = new Hero(document.getElementById("player2-name").value.trim());
     document.getElementById("player1-title").innerHTML = player1.name;
@@ -62,7 +63,7 @@ function startGame() {
 
 function messageLog(msg) {
     const gamelog = document.getElementById("game-log");
-    gamelog.innerHTML += `<p>$(msg)</p>`;
+    gamelog.innerHTML += `<p>${msg}</p>`;
     gamelog.scrollTop = gamelog.scrollHeight;
 }
 
