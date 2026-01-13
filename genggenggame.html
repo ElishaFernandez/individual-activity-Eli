@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="genggenggame.css">
     <script src="game.js"></script>
 </head>
-<body >
-    <h1 style="background-color: orange;">Two-Player Text-Based Battle Game</h1>
+<body>
+    <h1>Two-Player Text-Based Battle Game</h1>
     <div id="player-input">
         <input type="text" id="player1-name" placeholder=
         "Enter Player 1 name" oninput="validateNames()">
         <input type="text" id="player2-name" placeholder=
         "Enter Player 2 name" oninput="validateNames()"><br>
-        <button id="start-game" onclick="startGame()">Start Game</button>
+        <button id="start-game" onclick="startGame()" 
+        >Start Game</button>
     </div> <br>
     
     <div id="game-container">
@@ -27,19 +28,15 @@
             <h3>Wins: <span id="player1-wins">0</span></h3>
 
 
-
-<div class="weapons">
-    <img src="sword.jpg" class="weapon" onclick="setWeapon(1, 'Sword', this)">
-    <img src="bow.jpg" class="weapon" onclick="setWeapon(1, 'Bow', this)">
-    <img src="axe.jpg" class="weapon" onclick="setWeapon(1, 'Axe', this)">
-</div>
-
-
-
-
-
-    <button id="player1-attack" 
-            onclick="playerAttack(1)" >Attack</button>
+            <div class="weapon-choices" id="player1-weapon-choices">
+                <input type="hidden" id="player1-weapon" value="Sword">
+                <img src="sword.jpg" alt="Sword" class="weapon-img weapon-selected" onclick="selectWeapon(1,'Sword', this)">
+                <img src="axe.jpg" alt="Axe" class="weapon-img" onclick="selectWeapon(1,'Axe', this)">
+                <img src="bow.jpg" alt="Bow" class="weapon-img" onclick="selectWeapon(1,'Bow', this)">
+            </div>
+            <button id="player1-attack" onclick="playerAttack(1)"  title="Attack">
+                <img src="attack.jpg.jpg" alt="Attack" class="attack-icon">
+            </button>
         </div>
         <div class="player-container" id="player2">
             <h2 id="player2-title">Player 2</h2>
@@ -47,20 +44,19 @@
             <div class="health-bar"><div id="player2-health-bar" 
                 class="health-bar-inner"></div></div>
             <h3>Wins: <span id="player2-wins">0</span></h3>
-   
-<div class="weapons">
-    <img src="sword.jpg" class="weapon" onclick="setWeapon(2, 'Sword', this)">
-    <img src="bow.jpg" class="weapon" onclick="setWeapon(2, 'Bow', this)">
-    <img src="axe.jpg" class="weapon" onclick="setWeapon(2, 'Axe', this)">
-</div>
-
-
-
-    <button id="player2-attack" onclick="playerAttack(2)" 
-            >Attack</button>
+            <div class="weapon-choices" id="player2-weapon-choices">
+                <input type="hidden" id="player2-weapon" value="Sword">
+                <img src="sword.jpg" alt="Sword" class="weapon-img weapon-selected" onclick="selectWeapon(2,'Sword', this)">
+                <img src="axe.jpg" alt="Axe" class="weapon-img" onclick="selectWeapon(2,'Axe', this)">
+                <img src="bow.jpg" alt="Bow" class="weapon-img" onclick="selectWeapon(2,'Bow', this)">
+            </div>
+            <button id="player2-attack" onclick="playerAttack(2)" title="Attack">
+                <img src="attack.jpg.jpg" alt="Attack" class="attack-icon">
+            </button>
         </div>
     </div>
     <div id="game-log"><h3>Game Log</h3></div>
 
+ 
 </body>
 </html>
