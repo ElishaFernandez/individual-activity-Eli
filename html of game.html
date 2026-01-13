@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Container Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        /* Main wrapper */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left & Right sidebars */
+        .left, .right {
+            width: 20%;
+            background: #ddd;
+            padding: 10px;
+        }
+
+        /* Center (game area) */
+        .center {
+            width: 60%;
+            background: #fff;
+            padding: 10px;
+        }
+
+        /* Game container */
+        .game-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        } 
+
+        .game-content {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .layout {
+                flex-direction: column;
+            }
+            .left, .center, .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout">
+
+        <!-- Left container -->
+        <div class="left">
+            <h3>Left Panel</h3>
+            <p>Ads / Menu / Info</p>
+        </div>
+
+        <!-- Center container -->
+        <div class="center">
+            <div class="game-container">
+                Game goes here
+            </div>
+            <div class="game-content" style="background-color: pink;">another one</div>
+        </div>
+
+        <!-- Right container -->
+        <div class="right">
+            <h3>Right Panel</h3>
+            <p>Stats / Controls</p>
+            <button id="start-game" onclick="
+           click ">button</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
