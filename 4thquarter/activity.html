@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Java Script Arrays</h1>
+    <p id="demo"></p>
+    
+    <script>
+        const car = [];
+        car[2] = 'My liberation notes';
+        car[1] = 'My dearest';
+        car[0] = 'Doctor';
+        document.getElementById("demo").innerHTML = car
+
+        //2nd example 
+        const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+        document.getElementById("demo").innerHTML += "<br>" + fruits[1];
+
+        //3rd example
+        const grade = {
+            ella: '89',
+            mae: '90',
+            john: '95'
+        }
+      document.getElementById("demo").innerHTML += "<br>" + grade.john;    
+
+      //4th example
+        const numbers = [45, 4, 9, 16, 25];
+        let size = numbers.length;
+        document.getElementById("demo").innerHTML += "<br>" + size;
+
+    //5th example
+        const veggies = ['Carrot', 'Broccoli', 'Asparagus', 'Cauliflower'];
+        document.getElementById("demo").innerHTML += "<br>" + veggies[veggies.length - 1];
+
+        //6th example
+        const animals = ['Dog', 'Cat', 'Elephant', 'Tiger'];
+        let animal = animals.at(-2); //accessing 2nd last element
+        document.getElementById("demo").innerHTML += "<br>" + animal;
+        
+
+        //7TH EX
+        const myGirls = ["Mae", "Ara"];
+        const myBoys = ["John", "Eli"];
+        const myChildren = myGirls.concat(myBoys);
+        document.getElementById("demo").innerHTML += "<br>" + myChildren;
+
+        //8TH EX
+        const numbers1 = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo").innerHTML += "<br>" + numbers1.copyWithin(2, 0);
+    </script>
+</body>
+
+</html>
