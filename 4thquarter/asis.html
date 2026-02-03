@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo1"></p> 
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+
+    <script>
+     const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+        document.getElementById("demo1").innerHTML = fruits;
+        fruits.pop();//removes last element
+        document.getElementById("demo2").innerHTML = fruits;
+        fruits.shift();
+        document.getElementById("demo3").innerHTML = fruits;
+        fruits.push();
+        document.getElementById("demo4").innerHTML = fruits;
+        fruits.unshift('Fig');
+        
+
+
+    </script>
+</body>
+</html>
