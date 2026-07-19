@@ -1,0 +1,31 @@
+div {
+    text-align: center;
+    background-color: #412B6B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #211832;
+}
+
+input {
+    padding: 5px 20px;
+    margin: 5px;
+}
+
+#diceImage img{
+
+    width: 80px;
+    height: 80px;
+    margin: 4px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+}
+
+button {
+  background-color:#B13BFF ;
+}
+
+button:hover {
+   background-color:  hsl(276, 77%, 76%); 
+}

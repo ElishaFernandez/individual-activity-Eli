@@ -85,4 +85,5 @@ function selectWeapon(player, weapon, img) {
     }
 
     img.classList.add("weapon-selected");
+     
 }
